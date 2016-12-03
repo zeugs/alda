@@ -1,0 +1,436 @@
+wait8 = r1~1~1~1~1~1~1~1 
+(tempo! 124)
+
+viola "viola-1":
+	(key-signature! [:c :minor])
+	(panning 20) (quant 70) (volume 71)
+
+	wait8 %background_start
+	wait8 %background_start2
+	wait8
+	wait8 %background_start3
+
+	wait8
+
+	%main_theme
+	(volume 87)
+	o3 a4 a16 b > c d e r8~16 |	a4 g f e | f e d8 c < a2 | b1 
+	o3 a4 a16 b > c d e r8~16 | a4 b a8 g (quant 60) f g | a8 b8 e4 (quant 80) f2 | (quant 90) d2 e2~4
+
+	o3 a4 a16 b > c d e r8~16 |	a4 g f e | f e d8 c < a2 | b1 
+	o3 a4 a16 b > c d e r8~16 |	o4 c4 < b2 r8 d | e f g4 r8 (quant 60) f g f | (quant 90) d4 e2 r2 
+
+	%background_start4
+
+	o3 a4 a16 b > c d e r8~16 |	a4 g f e | f e d8 c < a2 | b1
+	o3 a4 a16 b > c d e r8~16 | a4 b a8 g (quant 60) f g | a8 b8 e4 (quant 80) f2 | (quant 90) d2 e2~4
+	
+	o3 a4 a16 b > c d e r8~16 |	a4 g f e | f e d8 c < a2 | b1 
+	o3 a4 a16 b > c d e r8~16 |	o4 c4 < b2 r8 d | e f g4 r8 (quant 60) f g f | (quant 90) d4 e2 r2
+
+	%brass_break
+	wait8
+	r1~1
+	%interlude
+	wait8
+	wait8
+	(quant 80)
+	wait8
+	o4 (volume 40) a4 g f e | d c a g | f e d e | a g f e
+	o4 (volume 55) a4 g f e | d c a g | f e d e | a g f e 
+	
+	o4 (volume 50) a4 g f e | d c a g | f e d e | a g f e 
+	o4 (volume 75) a4 g f e | d c a g | f e d e | a g f e
+
+	%interlude_start4
+
+	o5 (volume 60) a4 g f e | d c a g | f e d e | a g f e
+	o5 (volume 70) a4 g f e | d c a g | f e d e | a g f e
+
+	o4 (volume 65) a4 g f e | d c a g | f e d e | a g f e 
+	o4 (volume 80) a4 g f e | d c a g | f e d e | a g f e
+
+	o5 (volume 75) a4 g f e | d c a g | f e d e | a g f e
+	o5 (volume 95) a4 g f e | d c a g | f e d e | a g f e 
+
+	%brass_break2
+
+	wait8
+	r1
+
+	%main_theme_part2
+	(key-signature [:f :sharp :minor])
+	(volume 27)
+	o3 a4 a16 b > c d e r8~16 |	a4 g f e | f e d8 c < a2 | b1 
+	(volume 47)
+	o3 a4 a16 b > c d e r8~16 | a4 b a8 g (quant 60) f g | a8 b8 e4 (quant 80) f2 | (quant 90) d2 e2~4
+
+	(volume 57)
+	o3 a4 a16 b > c d e r8~16 |	a4 g f e | f e d8 c < a2 | b1 
+	(volume 77)
+	o3 a4 a16 b > c d e r8~16 |	o4 c4 < b2 r8 d | e f g4 r8 (quant 60) f g f | (quant 90) d4 e2 r2
+
+	(volume 67)
+	o3 a4 a16 b > c d e r8~16 |	a4 g f e | f e d8 c < a2 | b1 
+	(volume 87)
+	o3 a4 a16 b > c d e r8~16 | a4 b a8 g (quant 60) f g | a8 b8 e4 (quant 80) f2 | (quant 90) d2 e2~4
+
+	%main_theme_vary
+	(volume 87)
+	o3 a4 a16 b > c d e r8~16 | a4 g f e | f e d8 c < a2 | b1
+	o3 a4 a16 b > c d e r8~16 | o4 c4 < b2 r8 d | e f g4 r8 (quant 60) f g f | (quant 90) d4 e2 r2
+	o3 a1
+
+	[o3 a4 a16 b > c d e r8~16 | a4 g f e | f e d8 c < a2 | b1
+	 o3 a4 a16 b > c d e r8~16 | o4 c4 < b2 r8 d | e f g4 r8 (quant 60) f g f | (quant 90) d4 e2 r2] * 2
+
+	wait8
+	
+	%coda
+	(volume 70)
+	(quant 97)
+	o4 c1 < b > c < b 
+	o4 d1 c < b > c
+	o4 c1~1
+
+flute:
+	(panning 80) (quant 80) (volume 56)
+	
+	wait8
+	wait8
+
+	o4 e2 c | < a1 | > c | d
+	o4 e2 c | < a1 | > c | f
+	
+	o4 f2 c | d1 | a  | b
+	o4 b    | a  | g1 | b
+
+	@interlude
+	@main_theme_vary
+	(key-signature [:f :sharp :minor])
+	o3 a4 a16 b > c d e r8~16 | a4 g f e | f e d8 c < a2 | b1
+	o3 a4 a16 b > c d e r8~16 | o5 c4 < b2 r8 d | e f g4 r8 (quant 60) f g f | (quant 90) d4 e2 r2
+	o3 r1
+
+	[o3 a4 a16 b > c d e r8~16 | a4 g f e | f e d8 c < a2 | b1
+	 o3 a4 a16 b > c d e r8~16 | o5 c4 < b2 r8 d | e f g4 r8 (quant 60) f g f | (quant 90) d4 e2 r2] * 3
+
+	@coda
+	o3 c1 < b > c < b 
+	o3 d1 c < b > c
+	o4 c1~1
+
+cello "cello-1":
+	@background_start
+	(panning 30) (quant 69) (volume 32)
+	[o3 e8 c e f e c e f | f d e f f d e f | e8 c e f e c e f | d1
+	 o3 f8 d f g a g f g | b a g f c g f e | d e f g c b a e  | d1] * 8
+
+	@interlude
+	wait8
+	wait8
+
+	(volume 10)
+	o3 (quant 80) e1 f > e f
+	o4 (quant 70) e1 f > e d
+	(volume 27)
+	o3 (quant 80) e1 f > e f
+	o4 (quant 70) e1 f > e g
+
+	(volume 30)
+	o3 (quant 80) e1 f > e f
+	o4 (quant 70) e1 f > e d
+	(volume 65)
+	o3 (quant 80) e1 f > e f
+	o4 (quant 70) e1 f > e g
+	
+	(volume 60)
+	o3 (quant 80) e1 f > e f
+	o4 (quant 70) e1 f > e d
+	(volume 85)
+	o3 (quant 80) e1 f > e f
+	o4 (quant 70) e1 f > e g
+
+	@main_theme_vary
+	(key-signature [:f :sharp :minor])
+	[o2 e8 c e f e c e f | f d e f f d e f | e8 c e f e c e f | d1] * 4
+
+	@coda
+	o4 c1 < b > c < b 
+	o4 d1 c < b > c
+
+contrabass:
+	(panning 80) (quant 85)	(volume 40)
+	o2 e2 c | < a1 | > c | d o2 e2 c | < a1 | > c | f
+	o2 f2 c | d1   | a   | b o2 b    | a    | g1  | b
+
+	(panning 80) (quant 85)	(volume 60)
+	o2 e2 c | < a1 | > c | d o2 e2 c | < a1 | > c | f
+	o2 f2 c | d1   | a   | b o2 b    | a    | g1  | b
+
+	@interlude
+	(volume 30)	o1 a1 b > c < b |	o1 b1 > c d c
+	(volume 45)	o1 a1 b > c < b |	o1 b1 > c d c
+
+	(volume 35)	o1 a1 b > c < b |	o1 b1 > c d e
+	(volume 45)	o1 a1 b > c < b |	o1 b1 > c d c
+
+	%interlude_second
+	@interlude_second
+	(volume 45)	o2 a1 b > c < b |	o2 b1 > c d e
+	(volume 65)	o2 a1 b > c < b |	o2 b1 > c d c
+
+	(volume 55)	o2 a1 b > c < b |	o2 b1 > c d e
+	(volume 75)	o2 a1 b > c < b |	o2 b1 > c d g
+
+	@main_theme_vary
+	(key-signature [:f :sharp :minor])
+	[o2 e8 c e f e c e f | f d e f f d e f | e8 c e f e c e f | d1] * 4
+
+viola "viola-2":
+	@interlude
+	wait8
+	(quant 80)
+	(volume 18)	o3 a1~1 g1~1 | f1~1 e1~1
+
+	(volume 21)	o3 a1~1 g1~1 | f1~1 e1~1
+	(volume 48)	o3 a1~1 g1~1 | f1~1 e1~1
+
+	(volume 38)	o3 a1~1 g1~1 | f1~1 e1~1
+	(volume 58)	o3 a1~1 g1~1 | f1~1 e1~1
+
+	(volume 60)	o3 a1~1 g1~1 | f1~1 e1~1
+	(volume 70)	o3 a1~1 g1~1 | f1~1 e1~1
+
+	@main_theme_vary
+	(key-signature [:f :sharp :minor])
+	[o4 e8 c e f e c e f | f d e f f d e f | e8 c e f e c e f | d1] * 4
+
+violin "vio-1": 
+	@background_start2
+	(panning 70) (volume 35) (quant 95)
+	wait8
+	[o3 c2 d | < a b | b a | > d g | o3 g a | d f | e1 | f] * 2
+
+	@main_theme
+	(volume 85)
+	[o4 a4 a16 b > c d e r8~16 | a4 g f e | f e d8 c < a2 | b1
+	 o4 a4 a16 b > c d e r8~16 | o5 c4 < b2 r8 d | e f g4 r8 (quant 50) f g f | (quant 90) d4 e2 r2] * 4
+
+	@interlude
+	wait8
+	wait8
+
+	(volume 20)	o5 a1~1 g1~1 | f1~1 e1~1
+	(volume 30)	o5 a1~1 g1~1 | f1~1 e1~1
+
+	(volume 30)	o6 a1~1 g1~1 | f1~1 e1~1
+	(volume 45)	o6 a1~1 g1~1 | f1~1 e1~1
+
+	(volume 60)	o6 a1~1 g1~1 | f1~1 e1~1
+	(volume 65)	o6 a1~1 g1~1 | f1~1 e1~1
+
+	@main_theme_part2
+	(key-signature [:f :sharp :minor])
+	wait8
+	(volume 85)
+	o4 a4 a16 b > c d e r8~16 | a4 g f e | f e d8 c < a2 | b1
+	o4 a4 a16 b > c d e r8~16 | o5 c4 < b2 r8 d | e f g4 r8 (quant 50) f g f | (quant 90) d4 e2 r2
+	[o4 a4 a16 b > c d e r8~16 | a4 g f e | f e d8 c < a2 | b1
+	 o4 a4 a16 b > c d e r8~16 | o5 c4 < b2 r8 d | e f g4 r8 (quant 50) f g f | (quant 90) d4 e2 r2] * 6
+
+violin "vio-2": 
+	@background_start2
+	(panning 86) (volume 36)
+	(quant 95)
+	[o4 c2 d | < a b | b a | > d g | o4 g a | d f | e1 | f] * 2
+	(volume 79)
+
+	@interlude_start4
+	(volume 60)
+	[o4 (quant 70) a4 (quant 90) c8 d e > c (quant 70) e4 (quant 90) d8 c f c
+	o4 (quant 70) a4 (quant 90) c8 d e > c (quant 70) e4 (quant 90) d8 c f c] * 6
+
+	@main_theme_vary
+	(key-signature [:f :sharp :minor])
+	o4 a4 a16 b > c d e r8~16 | a4 g f e | f e d8 c < a2 | b1
+	o4 a4 a16 b > c d e r8~16 | o5 c4 < b2 r8 d | e f g4 r8 (quant 70) f g f | (quant 90) d4 e2 r2
+	o3 a1~1~1
+
+	[o4 a4 a16 b > c d e r8~16 | a4 g f e | f e d8 c < a2 | b1
+	 o4 a4 a16 b > c d e r8~16 | o5 c4 < b2 r8 d | e f g4 r8 (quant 70) f g f | (quant 90) d4 e2 r2] * 2
+
+midi-french-horn: 
+	@brass_break
+	(panning 86) (volume 95) (quant 95)
+	o4 c1 | < a | b | > d | o4 e1 | d | e | f
+
+	@interlude
+	@brass_break2
+	o4 c1 | < a | b | > d | o4 e1 | d | e | f
+
+	@main_theme_vary
+	(key-signature [:f :sharp :minor])
+	(volume 100)	
+	o4 a4 a16 b > c d e r8~16 | a4 g f e | f e d8 c < a2 | b1
+	o4 a4 a16 b > c d e r8~16 | o5 c4 < b2 r8 d | e f g4 r8 (quant 70) f g f | (quant 90) d4 e2 r2
+	o3 a1~1~1~1
+
+	[o4 a4 a16 b > c d e r8~16 | a4 g f e | f e d8 c < a2 | b1
+	 o4 a4 a16 b > c d e r8~16 | o5 c4 < b2 r8 d | e f g4 r8 (quant 70) f g f | (quant 90) d4 e2 r2] * 2
+
+violin "vio-3": 
+	@background_start2
+	(panning 26) (volume 60) (quant 95)
+	[o3 c1 | < a | b | > d | o3 e1 | d | e | f] * 2
+
+	@interlude
+	@interlude_start4
+	o3 (volume 40) r4 d2 r e r f r g r4 | r4 a2 r g r f r g r4
+	o4 (volume 70) r4 d2 r e r f r g r4 | r4 a2 r g r f r g r4
+	o4 (volume 80) r4 d2 r e r f r g r4 | r4 a2 r g r f r g r4
+
+	@main_theme_vary
+	(key-signature [:f :sharp :minor])
+	(volume 85)
+	o5 a4 a16 b > c d e r8~16 | a4 g f e | f e d8 c < a2 | b1
+	o5 a4 a16 b > c d e r8~16 | o6 c4 < b2 r8 d | e f g4 r8 (quant 70) f g f | (quant 90) d4 e2 r2
+	o4 a1
+
+	[o5 a4 a16 b > c d e r8~16 | a4 g f e | f e d8 c < a2 | b1
+	 o5 a4 a16 b > c d e r8~16 | o6 c4 < b2 r8 d | e f g4 r8 (quant 70) f g f | (quant 90) d4 e2 r2] * 3
+
+viola "viola-3":
+	@interlude
+	@main_theme_vary
+	(key-signature [:f :sharp :minor])
+	(panning 14) (volume 80) (quant 80)
+	o4 a4 a16 b > c d e r8~16 |	a4 g f e | f e d8 c < a2 | b1
+	o4 a4 a16 b > c d e r8~16 |	o6 c4 < b2 r8 d | e f g4 r8 (quant 60) f g f | (quant 90) d4 e2 r2
+
+	[o4 a4 a16 b > c d e r8~16 | a4 g f e | f e d8 c < a2 | b1
+	 o4 a4 a16 b > c d e r8~16 | o6 c4 < b2 r8 d | e f g4 r8 (quant 60) f g f | (quant 90) d4 e2 r2
+	 o4 a1~1] * 3
+
+electric-bass-finger: 
+	@background_start3
+	(panning 20) (quant 60) (volume 50)
+	[o1 c8 r > a < c > g r f e | r > a a r g f < r d
+	 o2 c8 < a r a a b > c a | f4 r e8 e r c d] * 10
+	
+	@main_theme_part2
+	(key-signature [:f :sharp :minor])
+	wait8
+	wait8
+	(volume 40) 
+	[o1 c8 r > a < c > g r f e | r > a a r g f < r d
+	 o2 c8 < a r a a b > c a | f4 r e8 e r c d] * 2
+	(volume 90) 
+	[o1 c8 r > a < c > g r f e | r > a a r g f < r d
+	 o2 c8 < a r a a b > c a | f4 r e8 e r c d] * 8
+
+percussion:
+	@background_start3
+	(key-signature [:c :major])
+	(panning 80) 
+	(volume 62)
+	[o2 c8 c f4 c8 c f o3 f | o2 c c f f o3 e4 e | o2 c8 c f4 c8 c f o3 f | o3 e4 e o2 c8 g g a
+	 o2 c8 c g4 c16 c16 r8 f o3 f | o2 c f r f o3 e4 f | o2 c8 c f4 c8 c f16 f16 o3 f8 | o3 e4 e o2 r8 c f a
+	 o2 c8 d > o3 f a r b < c8 c8 | g g c f c16 c16 g8 r f | > a2 c8 < c c g | f e > d e < c g > a r] * 3
+
+	(volume 62)
+	o2 c8 c f4 c8 c f o3 f | o2 c c f f o3 e4 e | o2 c8 c f4 c8 c f o3 f | o3 e4 e o2 c8 g g a
+	o2 c8 c g4 c16 c16 r8 f o3 f | o2 c f r f o3 e4 f | o2 c8 c f4 c8 c f16 f16 o3 f8 | o3 e4 e o2 r8 c f a
+
+	@main_theme_part2
+	wait8
+	wait8
+	(key-signature [:c :major])
+	(volume 40) 
+	[o2 c8 c f4 c8 c f o3 f | o2 c c f f o3 e4 e | o2 c8 c f4 c8 c f o3 f | o3 e4 e o2 c8 g g a] * 2
+	(volume 82) 
+	[o2 c8 c f4 c8 c f o3 f | o2 c c f f o3 e4 e | o2 c8 c f4 c8 c f o3 f | o3 e4 e o2 c8 g g a
+	 o2 c8 c g4 c16 c16 r8 f o3 f | o2 c f r f o3 e4 f | o2 c8 c f4 c8 c f16 f16 o3 f8 | o3 e4 e o2 r8 c f a
+	 o2 c8 d > o3 f a r b < c8 c8 | g g c f c16 c16 g8 r f | > a2 c8 < c c g | f e > d e < c g > a r] * 3
+
+trombone "trombone-1":
+	@background_start3
+	(panning 93) (volume 90)
+	[o1 a1/>e1 | o3 a1/>e1 
+	 o1 a1/>e1 | o3 a1/>f1] * 2
+
+	@brass_break
+	[o1 a1/>e1 | o3 a1/>e1 
+	 o1 a1/>e1 | o3 a1/>f1] * 2
+
+	@interlude
+
+	@brass_break2
+	[o1 a1/>e1 | o3 a1/>e1 
+	 o1 a1/>e1 | o3 a1/>f1] * 2
+
+	@main_theme_vary
+	(key-signature [:f :sharp :minor])
+	o2 a4 a16 b > c d e r8~16 | a4 g f e | f e d8 c < a2 | b1
+	o2 a4 a16 b > c d e r8~16 | o4 c4 < b2 r8 d | e f g4 r8 (quant 70) f g f | (quant 90) d4 e2 r2
+	o2 a1~1~1~1
+
+	[o2 a4 a16 b > c d e r8~16 | a4 g f e | f e d8 c < a2 | b1
+	 o2 a4 a16 b > c d e r8~16 | o4 c4 < b2 r8 d | e f g4 r8 (quant 70) f g f | (quant 90) d4 e2 r2] * 2
+
+trombone "trombone-2":
+	@background_start3
+	(panning 7) (volume 80)
+	[o1 a1/>e1 | o3 a1/>e1 
+	 o1 a1/>e1 | o3 a1/>f1] * 2
+
+	@brass_break
+	[o1 a1/>e1 | o3 a1/>e1 
+	 o1 a1/>e1 | o3 a1/>f1] * 2
+
+	@interlude
+
+	@brass_break2
+	[o1 a1/>e1 | o3 a1/>e1 
+	 o1 a1/>e1 | o3 a1/>f1] * 2
+
+	@main_theme_vary
+	(key-signature [:f :sharp :minor])
+	o3 a4 a16 b > c d e r8~16 | a4 g f e | f e d8 c < a2 | b1
+	o3 a4 a16 b > c d e r8~16 | o5 c4 < b2 r8 d | e f g4 r8 (quant 70) f g f | (quant 90) d4 e2 r2
+	o3 a1~1~1~1
+
+	[o3 a4 a16 b > c d e r8~16 | a4 g f e | f e d8 c < a2 | b1
+	 o3 a4 a16 b > c d e r8~16 | o5 c4 < b2 r8 d | e f g4 r8 (quant 70) f g f | (quant 90) d4 e2 r2] * 2
+
+tuba:
+	@background_start3
+	(panning 15) (volume 96)
+	[o2 a1/>e1/b+1 | o4 a1/>e1/d1 
+	 o2 a1/>e1/b+1 | o4 a1/>f1/>e1] * 2
+
+	@brass_break
+	[o1 a1/>e1 | o3 a1/>e1 
+	 o1 a1/>e1 | o3 a1/>f1] * 2
+
+	@interlude
+
+	@brass_break2
+	[o1 a1/>e1 | o3 a1/>e1 
+	 o1 a1/>e1 | o3 a1/>f1] * 2
+
+	@main_theme_vary
+	(key-signature [:f :sharp :minor])
+	(volume 76)
+	o3 a4 a16 b > c d e r8~16 | a4 g f e | f e d8 c < a2 | b1
+	o3 a4 a16 b > c d e r8~16 | o5 c4 < b2 r8 d | e f g4 r8 (quant 70) f g f | (quant 90) d4 e2 r2
+	o3 a1~1~1~1
+
+	[o3 a4 a16 b > c d e r8~16 | a4 g f e | f e d8 c < a2 | b1
+	 o3 a4 a16 b > c d e r8~16 | o5 c4 < b2 r8 d | e f g4 r8 (quant 70) f g f | (quant 90) d4 e2 r2] * 2
+
+midi-church-organ:
+	@background_start4
+	(panning 30) (volume 80) (quant 80)
+	o3 a1~1/e1~1 b1~1/e1~1 | o4 c1~1/e1~1 b1~1/e1~1
+	o4 a1~1/e1~1 b1~1/e1~1 | o4 c1~1/e1~1 b1~1/e1~1
