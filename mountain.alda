@@ -1,0 +1,25 @@
+wait8 = r1~1~1~1~1~1~1~1 
+
+violin "vio1": (tempo 100) 
+	o2 [> [e8 f g]*20]*4 
+	o7 [< [g8 f e]*20]*4
+viola "viola1": (tempo 120) 
+	o2 [> [e8 f g]*24]*4
+	o6 [< [g8 f e]*24]*4
+cello "cello1": (tempo 130) 
+	o1 [> [e8 f g]*26]*4
+	o6 [< [g8 f e]*26]*4
+
+cello "cello2": (tempo 120) 
+	o2 [> [b2 a c d]*6]*3
+	o6 [< [d2 c a b]*6]*3
+contrabass "cb1": (tempo 100) 
+	o0 [> [b2 a g e f]*4]*3
+	o4 [< [f2 e g a b]*4]*3
+
+violin "vio2": (tempo 100) 
+	o2 [> [b4 a c d]*6]*5
+	o7 [< [d4 c a b]*6]*5
+contrabass "cb2": (tempo 100) 
+	o3 [[b1 a g]*2]*5
+	o2 [[g1 a b]*2]*5
