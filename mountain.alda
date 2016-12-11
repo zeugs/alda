@@ -1,51 +1,103 @@
-contrabass "cb2": (tempo 100) (volume 95) (panning 60)
-midi-french-horn "french-horn1": (tempo 100) (volume 85) (panning 40)
-trombone "trombone1": (tempo 100) (volume 90) (panning 40)
-organ "organ1": (tempo 100) (volume 83) (panning 75)
+contrabass "cb2": (tempo 100) (panning 60)
+midi-french-horn "french-horn1": (tempo 100) (panning 40)
+trombone "trombone1": (tempo 100) (panning 40)
+organ "organ1": (tempo 100) (panning 75)
 
-violin "vio2": (tempo 100) (volume 72) (panning 40)
-cello "cello2": (tempo 120) (volume 75) (panning 30)
-bassoon "bassoon1": (tempo 120) (volume 83) (panning 70)
-contrabass "cb1": (tempo 100) (volume 83) (panning 70)
+violin "vio2": (tempo 100) (panning 40)
+cello "cello2": (tempo 120) (panning 30)
+bassoon "bassoon1": (tempo 120) (panning 70)
+contrabass "cb1": (tempo 100) (panning 70)
 
-violin "vio1": (tempo 100) (volume 70) (panning 40)
-ocarina "ocarina1": (tempo 100) (volume 72) (panning 80)
-viola "viola1": (tempo 120) (volume 77) (panning 70)
-cello "cello1": (tempo 130) (volume 73) (panning 20)
+violin "vio1": (tempo 100) (panning 40)
+ocarina "ocarina1": (tempo 100) (panning 80)
+viola "viola1": (tempo 120) (panning 70)
+cello "cello1": (tempo 130) (panning 20)
 
+# x5 group
 cb2: 
-	o2 [[b1 a g]*1]*5
-	o3 [[b1 a g]*1]*5
-	o4 [[g1 a b]*1]*5
+	o2 (volume 40) [[b1 a g]*1]*5
+	o3 (volume 70) [[b1 a g]*1]*5	
+	o4 (volume 80) [[b1 a g]*1]*5	
 
-	o4 [[g1 a b]*1]*5
-	o3 [[g1 a b]*1]*5
-	o2 [[g1 a b]*1]*5
+	o4 (volume 70) [[g1 a b]*1]*5
+	o3 (volume 50) [[g1 a b]*1]*5
+	o2 (volume 35) [[g1 a b]*1]*5
 french-horn1/trombone1/organ1: 
-	o2 [[b1 a g]*1]*5
-	o3 [[b1 a g]*1]*5
-	o4 [[g1 a b]*1]*5
+	o2 (volume 20) [[b1 a g]*1]*5
+	o3 (volume 40) [[b1 a g]*1]*5
+	o4 (volume 60) [[b1 a g]*1]*5
 
-	o4 [[g1 a b]*1]*5
-	o3 [[g1 a b]*1]*5
-	o2 [[g1 a b]*1]*5
+	o4 (volume 65) [[g1 a b]*1]*5
+	o3 (volume 50) [[g1 a b]*1]*5
+	o2 (volume 25) [[g1 a b]*1]*5
 vio2:
-	o2 [> [(quant 80) b4 (quant 94) a c d]*9]*5
-	o6 [< [d4 c (quant 80) a (quant 97) b]*9]*5
+	o2 
+	(volume 20) [> [(quant 80) b4 (quant 94) a c d]*9]
+	(volume 40) [> [(quant 80) b4 (quant 94) a c d]*9]
+	(volume 50) [> [(quant 80) b4 (quant 94) a c d]*9]
+	(volume 70) [> [(quant 80) b4 (quant 94) a c d]*9]
+	(volume 80) [> [(quant 80) b4 (quant 94) a c d]*9]
 
+	o6 
+	(volume 70) [< [d4 c (quant 80) a (quant 97) b]*9]
+	(volume 60) [< [d4 c (quant 80) a (quant 97) b]*9]
+	(volume 50) [< [d4 c (quant 80) a (quant 97) b]*9]
+	(volume 40) [< [d4 c (quant 80) a (quant 97) b]*9]
+	(volume 30) [< [d4 c (quant 80) a (quant 97) b]*9]
+
+# x3 group
 cello2/bassoon1:
-	o2 [> [b2 a (quant 80) c (quant 98) d]*9]*3
-	o6 [< [d2 c a b]*9]*3
-cb1:
-	o0 [> [b2 a g (quant 80) e (quant 91) f]*6]*3
-	o4 [< [f2 e g a b]*6]*3
+	o2 
+	(volume 20) [> [b2 a (quant 80) c (quant 98) d]*9]
+	(volume 50) [> [b2 a (quant 80) c (quant 98) d]*9]
+	(volume 80) [> [b2 a (quant 80) c (quant 98) d]*9]
 
+	o6 
+	(volume 80) [< [d2 c a b]*9]
+	(volume 50) [< [d2 c a b]*9]
+	(volume 30) [< [d2 c a b]*9]
+cb1:
+	o0 
+	(volume 23) [> [b2 a g (quant 80) e (quant 91) f]*6]
+	(volume 53) [> [b2 a g (quant 80) e (quant 91) f]*6]
+	(volume 73) [> [b2 a g (quant 80) e (quant 91) f]*6]
+
+	o4 
+	(volume 73) [< [f2 e g a b]*6]
+	(volume 53) [< [f2 e g a b]*6]
+	(volume 23) [< [f2 e g a b]*6]
+
+# x4 group
 vio1/ocarina1:
-	o2 [> [e8 f (quant 70) g (quant 93) c d e]*15]*4
-	o6 [< [e8 c d c f e]*15]*4
+	o2 
+	(volume 20) [> [e8 f (quant 90) g (quant 93) c d e]*15]
+	(volume 40) [> [e8 f (quant 80) g (quant 83) c d e]*15]
+	(volume 60) [> [e8 f (quant 70) g (quant 93) c d e]*15]
+	(volume 76) [> [e8 f (quant 70) g (quant 93) c d e]*15]
+	o6 
+	(volume 76) [< [e8 c d c f e]*15]
+	(volume 66) [< [e8 c d c f e]*15]
+	(volume 40) [< [e8 c d c f e]*15]
+	(volume 20) [< [e8 c d c f e]*15]
 viola1:
-	o2 [> [e8 f g c d (quant 60) e (quant 90)]*18]*4
-	o6 [< [e8 (quant 80) c (quant 98) d g f e]*18]*4
+	o2 
+	(volume 25) [> [e8 f g c d (quant 60) e (quant 90)]*18]
+	(volume 50) [> [e8 f g c d (quant 60) e (quant 90)]*18]
+	(volume 70) [> [e8 f g c d (quant 60) e (quant 90)]*18]
+	(volume 77) [> [e8 f g c d (quant 60) e (quant 90)]*18]
+	o6 
+	(volume 77) [< [e8 (quant 80) c (quant 98) d g f e]*18]
+	(volume 60) [< [e8 (quant 80) c (quant 98) d g f e]*18]
+	(volume 50) [< [e8 (quant 80) c (quant 98) d g f e]*18]
+	(volume 25) [< [e8 (quant 80) c (quant 98) d g f e]*18]
 cello1:
-	o1 [> [e8 f g]*39]*4
-	o6 [< [g8 f e]*39]*4
+	o1 
+	(volume 20) [> [e8 f g]*39]
+	(volume 40) [> [e8 f g]*39]
+	(volume 65) [> [e8 f g]*39]
+	(volume 73) [> [e8 f g]*39]
+	o6 
+	(volume 73) [< [g8 f e]*39]
+	(volume 55) [< [g8 f e]*39]
+	(volume 40) [< [g8 f e]*39]
+	(volume 30) [< [g8 f e]*39]	
