@@ -1,25 +1,51 @@
-wait8 = r1~1~1~1~1~1~1~1 
+contrabass "cb2": (tempo 100) (volume 95) (panning 60)
+midi-french-horn "french-horn1": (tempo 100) (volume 85) (panning 40)
+trombone "trombone1": (tempo 100) (volume 90) (panning 40)
+organ "organ1": (tempo 100) (volume 83) (panning 75)
 
-violin "vio1": (tempo 100) 
-	o2 [> [e8 f g]*20]*4 
-	o7 [< [g8 f e]*20]*4
-viola "viola1": (tempo 120) 
-	o2 [> [e8 f g]*24]*4
-	o6 [< [g8 f e]*24]*4
-cello "cello1": (tempo 130) 
-	o1 [> [e8 f g]*26]*4
-	o6 [< [g8 f e]*26]*4
+violin "vio2": (tempo 100) (volume 72) (panning 40)
+cello "cello2": (tempo 120) (volume 75) (panning 30)
+bassoon "bassoon1": (tempo 120) (volume 83) (panning 70)
+contrabass "cb1": (tempo 100) (volume 83) (panning 70)
 
-cello "cello2": (tempo 120) 
-	o2 [> [b2 a c d]*6]*3
-	o6 [< [d2 c a b]*6]*3
-contrabass "cb1": (tempo 100) 
-	o0 [> [b2 a g e f]*4]*3
-	o4 [< [f2 e g a b]*4]*3
+violin "vio1": (tempo 100) (volume 70) (panning 40)
+ocarina "ocarina1": (tempo 100) (volume 72) (panning 80)
+viola "viola1": (tempo 120) (volume 77) (panning 70)
+cello "cello1": (tempo 130) (volume 73) (panning 20)
 
-violin "vio2": (tempo 100) 
-	o2 [> [b4 a c d]*6]*5
-	o7 [< [d4 c a b]*6]*5
-contrabass "cb2": (tempo 100) 
-	o3 [[b1 a g]*2]*5
-	o2 [[g1 a b]*2]*5
+cb2: 
+	o2 [[b1 a g]*1]*5
+	o3 [[b1 a g]*1]*5
+	o4 [[g1 a b]*1]*5
+
+	o4 [[g1 a b]*1]*5
+	o3 [[g1 a b]*1]*5
+	o2 [[g1 a b]*1]*5
+french-horn1/trombone1/organ1: 
+	o2 [[b1 a g]*1]*5
+	o3 [[b1 a g]*1]*5
+	o4 [[g1 a b]*1]*5
+
+	o4 [[g1 a b]*1]*5
+	o3 [[g1 a b]*1]*5
+	o2 [[g1 a b]*1]*5
+vio2:
+	o2 [> [(quant 80) b4 (quant 94) a c d]*9]*5
+	o6 [< [d4 c (quant 80) a (quant 97) b]*9]*5
+
+cello2/bassoon1:
+	o2 [> [b2 a (quant 80) c (quant 98) d]*9]*3
+	o6 [< [d2 c a b]*9]*3
+cb1:
+	o0 [> [b2 a g (quant 80) e (quant 91) f]*6]*3
+	o4 [< [f2 e g a b]*6]*3
+
+vio1/ocarina1:
+	o2 [> [e8 f (quant 70) g (quant 93) c d e]*15]*4
+	o6 [< [e8 c d c f e]*15]*4
+viola1:
+	o2 [> [e8 f g c d (quant 60) e (quant 90)]*18]*4
+	o6 [< [e8 (quant 80) c (quant 98) d g f e]*18]*4
+cello1:
+	o1 [> [e8 f g]*39]*4
+	o6 [< [g8 f e]*39]*4
