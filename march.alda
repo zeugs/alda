@@ -1,5 +1,5 @@
 wait8 = r1~1~1~1~1~1~1~1 
-(tempo! 124)
+(tempo! 128)
 
 viola "viola-1":
 	(key-signature! [:c :minor])
@@ -9,7 +9,6 @@ viola "viola-1":
 	wait8 %background_start2
 	wait8
 	wait8 %background_start3
-
 	wait8
 
 	%main_theme
@@ -34,8 +33,8 @@ viola "viola-1":
 	%interlude
 	wait8
 	wait8
-	(quant 80)
 	wait8
+	(quant 80)
 	o4 (volume 40) a4 g f e | d c a g | f e d e | a g f e
 	o4 (volume 55) a4 g f e | d c a g | f e d e | a g f e 
 	
@@ -53,10 +52,7 @@ viola "viola-1":
 	o5 (volume 75) a4 g f e | d c a g | f e d e | a g f e
 	o5 (volume 95) a4 g f e | d c a g | f e d e | a g f e 
 
-	%brass_break2
-
-	wait8
-	r1
+	r1~1~1~1
 
 	%main_theme_part2
 	(key-signature [:f :sharp :minor])
@@ -159,12 +155,12 @@ cello "cello-1":
 	o4 c1 < b > c < b 
 	o4 d1 c < b > c
 
-contrabass:
+contrabass "contra1":
 	(panning 80) (quant 85)	(volume 40)
 	o2 e2 c | < a1 | > c | d o2 e2 c | < a1 | > c | f
 	o2 f2 c | d1   | a   | b o2 b    | a    | g1  | b
 
-	(panning 80) (quant 85)	(volume 60)
+	(volume 60)
 	o2 e2 c | < a1 | > c | d o2 e2 c | < a1 | > c | f
 	o2 f2 c | d1   | a   | b o2 b    | a    | g1  | b
 
@@ -175,8 +171,32 @@ contrabass:
 	(volume 35)	o1 a1 b > c < b |	o1 b1 > c d e
 	(volume 45)	o1 a1 b > c < b |	o1 b1 > c d c
 
-	%interlude_second
-	@interlude_second
+	(volume 45)	o2 a1 b > c < b |	o2 b1 > c d e
+	(volume 65)	o2 a1 b > c < b |	o2 b1 > c d c
+
+	(volume 55)	o2 a1 b > c < b |	o2 b1 > c d e
+	(volume 75)	o2 a1 b > c < b |	o2 b1 > c d g
+
+	@main_theme_vary
+	(key-signature [:f :sharp :minor])
+	[o2 e8 c e f e c e f | f d e f f d e f | e8 c e f e c e f | d1] * 4
+
+contrabass "contra2":
+	(panning 20) (quant 85)	(volume 40)
+	o2 e2 c | < a1 | > c | d o2 e2 c | < a1 | > c | f
+	o2 f2 c | d1   | a   | b o2 b    | a    | g1  | b
+
+	(volume 60)
+	o2 e2 c | < a1 | > c | d o2 e2 c | < a1 | > c | f
+	o2 f2 c | d1   | a   | b o2 b    | a    | g1  | b
+
+	@interlude
+	(volume 30)	o1 a1 b > c < b |	o1 b1 > c d c
+	(volume 45)	o1 a1 b > c < b |	o1 b1 > c d c
+
+	(volume 35)	o1 a1 b > c < b |	o1 b1 > c d e
+	(volume 45)	o1 a1 b > c < b |	o1 b1 > c d c
+
 	(volume 45)	o2 a1 b > c < b |	o2 b1 > c d e
 	(volume 65)	o2 a1 b > c < b |	o2 b1 > c d c
 
@@ -188,6 +208,11 @@ contrabass:
 	[o2 e8 c e f e c e f | f d e f f d e f | e8 c e f e c e f | d1] * 4
 
 viola "viola-2":
+	@background_start4
+	(panning 80) (quant 85)	(volume 60)
+	o3 a1~1/e1~1 b1~1/e1~1 | o3 c1~1/e1~1 b1~1/e1~1
+	o4 a1~1/e1~1 b1~1/e1~1 | o4 c1~1/e1~1 b1~1/e1~1
+
 	@interlude
 	wait8
 	(quant 80)
@@ -265,10 +290,6 @@ midi-french-horn:
 	(panning 86) (volume 95) (quant 95)
 	o4 c1 | < a | b | > d | o4 e1 | d | e | f
 
-	@interlude
-	@brass_break2
-	o4 c1 | < a | b | > d | o4 e1 | d | e | f
-
 	@main_theme_vary
 	(key-signature [:f :sharp :minor])
 	(volume 100)	
@@ -284,7 +305,6 @@ violin "vio-3":
 	(panning 26) (volume 60) (quant 95)
 	[o3 c1 | < a | b | > d | o3 e1 | d | e | f] * 2
 
-	@interlude
 	@interlude_start4
 	o3 (volume 40) r4 d2 r e r f r g r4 | r4 a2 r g r f r g r4
 	o4 (volume 70) r4 d2 r e r f r g r4 | r4 a2 r g r f r g r4
@@ -301,7 +321,6 @@ violin "vio-3":
 	 o5 a4 a16 b > c d e r8~16 | o6 c4 < b2 r8 d | e f g4 r8 (quant 70) f g f | (quant 90) d4 e2 r2] * 3
 
 viola "viola-3":
-	@interlude
 	@main_theme_vary
 	(key-signature [:f :sharp :minor])
 	(panning 14) (volume 80) (quant 80)
@@ -330,18 +349,6 @@ electric-bass-finger:
 	 o2 c8 < a r a a b > c a | f4 r e8 e r c d] * 8
 
 percussion:
-	@background_start3
-	(key-signature [:c :major])
-	(panning 80) 
-	(volume 62)
-	[o2 c8 c f4 c8 c f o3 f | o2 c c f f o3 e4 e | o2 c8 c f4 c8 c f o3 f | o3 e4 e o2 c8 g g a
-	 o2 c8 c g4 c16 c16 r8 f o3 f | o2 c f r f o3 e4 f | o2 c8 c f4 c8 c f16 f16 o3 f8 | o3 e4 e o2 r8 c f a
-	 o2 c8 d > o3 f a r b < c8 c8 | g g c f c16 c16 g8 r f | > a2 c8 < c c g | f e > d e < c g > a r] * 3
-
-	(volume 62)
-	o2 c8 c f4 c8 c f o3 f | o2 c c f f o3 e4 e | o2 c8 c f4 c8 c f o3 f | o3 e4 e o2 c8 g g a
-	o2 c8 c g4 c16 c16 r8 f o3 f | o2 c f r f o3 e4 f | o2 c8 c f4 c8 c f16 f16 o3 f8 | o3 e4 e o2 r8 c f a
-
 	@main_theme_part2
 	wait8
 	wait8
@@ -360,12 +367,6 @@ trombone "trombone-1":
 	 o1 a1/>e1 | o3 a1/>f1] * 2
 
 	@brass_break
-	[o1 a1/>e1 | o3 a1/>e1 
-	 o1 a1/>e1 | o3 a1/>f1] * 2
-
-	@interlude
-
-	@brass_break2
 	[o1 a1/>e1 | o3 a1/>e1 
 	 o1 a1/>e1 | o3 a1/>f1] * 2
 
@@ -388,12 +389,6 @@ trombone "trombone-2":
 	[o1 a1/>e1 | o3 a1/>e1 
 	 o1 a1/>e1 | o3 a1/>f1] * 2
 
-	@interlude
-
-	@brass_break2
-	[o1 a1/>e1 | o3 a1/>e1 
-	 o1 a1/>e1 | o3 a1/>f1] * 2
-
 	@main_theme_vary
 	(key-signature [:f :sharp :minor])
 	o3 a4 a16 b > c d e r8~16 | a4 g f e | f e d8 c < a2 | b1
@@ -413,12 +408,6 @@ tuba:
 	[o1 a1/>e1 | o3 a1/>e1 
 	 o1 a1/>e1 | o3 a1/>f1] * 2
 
-	@interlude
-
-	@brass_break2
-	[o1 a1/>e1 | o3 a1/>e1 
-	 o1 a1/>e1 | o3 a1/>f1] * 2
-
 	@main_theme_vary
 	(key-signature [:f :sharp :minor])
 	(volume 76)
@@ -428,9 +417,3 @@ tuba:
 
 	[o3 a4 a16 b > c d e r8~16 | a4 g f e | f e d8 c < a2 | b1
 	 o3 a4 a16 b > c d e r8~16 | o5 c4 < b2 r8 d | e f g4 r8 (quant 70) f g f | (quant 90) d4 e2 r2] * 2
-
-midi-church-organ:
-	@background_start4
-	(panning 30) (volume 80) (quant 80)
-	o3 a1~1/e1~1 b1~1/e1~1 | o4 c1~1/e1~1 b1~1/e1~1
-	o4 a1~1/e1~1 b1~1/e1~1 | o4 c1~1/e1~1 b1~1/e1~1
